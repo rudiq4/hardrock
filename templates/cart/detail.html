@@ -1,0 +1,53 @@
+{% extends "shop/base.html" %}
+{% block title %}
+    Ваш кошик
+{% endblock %}
+{% block content %}
+    <h1>Ваш кошик</h1>
+    <table class="cart">
+        <thead>
+        <tr>
+            <th>Зображення</th>
+            <th>Товар</th>
+            <th>Кількість</th>
+            <th>Видалити</th>
+            <th>Повна ціна</th>
+            <th>Ціна</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in cart %}
+            {% with product=item.product %}
+                <tr>
+                    <td>
+                        <a href="{{ product.get_absolute_url }}">
+                            <img src="{{ product.image.url }}" alt="" class="prod-img"/>
+                        </a>
+                    </td>
+                    <td>{{ product.name }}</td>
+                    <td>
+                        <form action="{% url "cart:CartAdd" product.id %}" method="post" class="add">
+                            {{ item.update_quantity_form.quantity }}
+                            {{ item.update_quantity_form.update }}
+                            {% csrf_token %}
+                            <input type="submit" value="Обновити">
+                        </form>
+                    </td>
+                    <td><a href="{% url "cart:CartRemove" product.id %}">Видалити</a></td>
+                    <td class="num">{{ item.price }} грн.</td>
+                    <td class="num">{{ item.total_price }} грн.</td>
+                </tr>
+            {% endwith %}
+        {% endfor %}
+        <tr class="total">
+            <td>Загальна</td>
+            <td colspan="4"></td>
+            <td class="num">{{ cart.get_total_price }} грн.</td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="text-right">
+        <a href="{% url "shop:ProductList" %}" class="btn">Продовжити покупки</a>
+        <a href="{% url "orders:OrderCreate" %}" class="btn">Оформити замовлення</a>
+    </p>
+{% endblock %}
