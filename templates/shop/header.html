@@ -1,0 +1,79 @@
+{% load static %}
+
+<header>
+    <div class="top_bar">
+        <div class="container">
+            <div class="col-md-6">
+                <ul class="social">
+                    <li><a target="_blank" href="https://www.webenlance.com/"><i class="fa fa-facebook text-white"></i></a>
+                    </li>
+                    <li><a target="_blank" href="https://webenlance.com"><i class="fa fa-twitter text-white"></i></a>
+                    </li>
+                    <li><a target="_blank" href="http://webenlance.com"><i class="fa fa-instagram text-white"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <ul class="rightc">
+                    <li><i class="fa fa-phone"></i> +38(066)673-22-65</li>
+                    <li><i class="fa fa-cart-plus"></i>
+                        {% with total_items=cart|length %}
+                            {% if cart|length > 0 %}
+                                Ваш кошик:
+                                <a href="{% url "cart:CartDetail" %}">
+                                    {{ total_items }} тов. {{ cart.get_total_price }} грн.
+                                </a>
+                            {% else %}
+                                Кошик пустий
+                            {% endif %}
+                        {% endwith %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--top_bar-->
+
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'shop:ProductList' %}"><img src="http://placehold.it/150x50&text=Logo"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Головна</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>for</span> Вспливаюче</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Кнопка1</a></li>
+                            <li><a href="#">Кнопка2</a></li>
+                            <li><a href="#">Кнопка3</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Під рискою</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span>for</span> Тиц</a></li>
+                    <li><a href="#"><span>for</span> Тиц</a></li>
+                    <li><a href="http://127.0.0.1:8000/admin">Адмінка</a></li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+</header>
+

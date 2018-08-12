@@ -32,4 +32,21 @@
     </div>
   </div>
 {% endblock %}
-</pre>
+
+
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="img-responsive">
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Product title</h4>
+                    <p class="group inner list-group-item-text">
+                    </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <p class="lead">{{ product.price }} грн.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

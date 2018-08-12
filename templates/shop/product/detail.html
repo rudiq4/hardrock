@@ -18,10 +18,7 @@
                 {% csrf_token %}
                 <input type="submit" value="Добавити в кошик">
             </form>
-            </p>
-            <span>
-        {{ product.descfdaf | linebreaks }}
-      </span>
+            <span>{{ product.desc | linebreaks }}</span>
         </div>
     </div>
 {% endblock %}
