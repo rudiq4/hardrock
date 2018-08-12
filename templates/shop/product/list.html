@@ -1,52 +1,44 @@
 {% extends 'shop/base.html' %}
 {% load static %}
 {% block title %}
-  {% if category %} {{ category.name }} {% else %} Сторінка товарів {% endif %}
+    {% if category %} {{ category.name }} {% else %} Сторінка товарів {% endif %}
 {% endblock %}
 {% block content %}
-  <div id="sidebar" class="col-sm-3">
-    <h3>Категорії</h3>
-    <ul>
-      <li {% if not category %} class="selected" {% endif %}>
-        <a href="{% url "shop:ProductList" %}">Всі</a>
-      </li>
-      {% for cat in categories %}
-        <li {% if category.slug == cat.slug %} class="selected" {% endif %}>
-          <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div id="main" class="product_list col-sm-9">
-    <h1>{% if category %}{{ category.name }}{% else %}Товари{% endif %}</h1>
-    <div class="items row">
-      {% for product in products %}
-        <div class="item col-sm-4">
-          <a href="{{ product.get_absolute_url }}">
-            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="img-responsive">
-          </a>
-          <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
-          {{ product.price }} грн.
-        </div>
-      {% endfor %}
+    <div id="sidebar" class="col-sm-3">
+        <h3>Категорії</h3>
+        <ul>
+            <li {% if not category %} class="selected" {% endif %}>
+                <a href="{% url "shop:ProductList" %}">Всі</a>
+            </li>
+            {% for cat in categories %}
+                <li {% if category.slug == cat.slug %} class="selected" {% endif %}>
+                    <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
-  </div>
+    <div id="main" class="product_list col-sm-9">
+        <h1>{% if category %}{{ category.name }}{% else %}Товари{% endif %}</h1>
+        <div class="items row">
+            {% for product in products %}
+                <!-- Product  -->
+                <div class="col-xs-4 col-lg-4 product-grid">
+                    <div class="prod-image">
+                        <a href="{{ product.get_absolute_url }}">
+                            <img src="
+                                    {% if product.image %}{{ product.image.url }}{% else %}{% static "" %}{% endif %}"
+                                 class="prod-img">
+                            <div class="overlay">
+                                <div class="detail">Дивитись деталі</div>
+                            </div>
+                        </a>
+                    </div>
+                    <h5 class="text-center">{{ product.name }}</h5>
+                    <h5 class="text-center price">{{ product.price }} грн.</h5>
+                </div>
+                <!-- ./Product -->
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
 
-
-        <div class="item  col-xs-4 col-lg-4">
-            <div class="thumbnail">
-                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="img-responsive">
-                <div class="caption">
-                    <h4 class="group inner list-group-item-heading">
-                        Product title</h4>
-                    <p class="group inner list-group-item-text">
-                    </p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <p class="lead">{{ product.price }} грн.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>

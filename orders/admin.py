@@ -21,9 +21,7 @@ def ExportToCSV(modeladmin, request, queryset):
     writer = csv.writer(response)
 
     fields = [field for field in opts.get_fields() if not field.many_to_many and not field.one_to_many]
-    # Первая строка- оглавления
     writer.writerow([field.verbose_name for field in fields])
-    # Заполняем информацией
     for obj in queryset:
         data_row = []
         for field in fields:
@@ -42,10 +40,10 @@ class OrderItemInline(admin.TabularInline):
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ['id', 'first_name', 'last_name', 'email', 'address',
+    list_display = ['id', 'size', 'first_name', 'last_name', 'email', 'address',
                     'postal_code', 'city', 'paid', 'created', 'updated', OrderDetail]
     list_filter = ['paid', 'created', 'updated']
-    inlines = [OrderItemInline]
+    inLines = [OrderItemInline]
     actions = [ExportToCSV]
 
 

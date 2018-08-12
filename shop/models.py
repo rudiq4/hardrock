@@ -34,12 +34,12 @@ class Product(models.Model):
         verbose_name='Категорія'
     )
     name = models.CharField(
-        max_length=32,
+        max_length=256,
         db_index=True,
         verbose_name='Назва'
     )
     slug = models.SlugField(
-        max_length=32,
+        max_length=256,
         db_index=True
     )
     image = models.ImageField(
@@ -50,10 +50,6 @@ class Product(models.Model):
     desc = models.TextField(
         blank=True,
         verbose_name='Опис'
-    )
-    short_desc = models.TextField(
-        blank=True,
-        verbose_name='Короткий опис'
     )
     price = models.DecimalField(
         max_digits=10,
