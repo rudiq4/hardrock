@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body>
-<section id="header">
-    {% include 'shop/header.html' %}
-</section>
-<section id="content row" class="container">
-    {% block content %}{% endblock %}
-</section>
+<div class="wrapper">
+    <section id="header">
+        {% include 'shop/header.html' %}
+    </section>
+    <section id="content row" class="container">
+        {% block content %}{% endblock %}
+    </section>
+</div>
 
-    {% include 'shop/footer.html' %}
+{% include 'shop/footer.html' %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

@@ -4,7 +4,7 @@
     {% if category %} {{ category.name }} {% else %} Сторінка товарів {% endif %}
 {% endblock %}
 {% block content %}
-    <div id="sidebar" class="col-sm-3">
+    <div id="sidebar" class="col-sm-3 sid">
         <h3>Категорії</h3>
         <ul>
             <li {% if not category %} class="selected" {% endif %}>
@@ -19,6 +19,7 @@
     </div>
     <div id="main" class="product_list col-sm-9">
         <h1>{% if category %}{{ category.name }}{% else %}Товари{% endif %}</h1>
+        <hr>
         <div class="items row">
             {% for product in products %}
                 <!-- Product  -->

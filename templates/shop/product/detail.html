@@ -5,20 +5,23 @@
 {% endblock %}
 {% block content %}
     <div class="product-detail">
-        <div class="col-sm-4">
-            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg" %}{% endif %}"
-                 class="img-responsive">
+        <div class="col-sm-8 detail-left">
+            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "" %}{% endif %}"
+                 class=" detail-img">
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-4 detail-right">
             <h1>{{ product.name }}</h1>
-            <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
-            <p class="price">{{ product.price }} грн.</p>
-            <form action="{% url "cart:CartAdd" product.id %}" method="post">
+            <hr class="modern">
+            <h2>Категорія: <a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+            <hr class="modern">
+            <span>{{ product.desc | linebreaks }}</span>
+            <hr class="modern">
+            <p class="price">Ціна: {{ product.price }} грн.</p>
+            <form action="{% url "cart:CartAdd" product.id %}" method="post" class="buy-form">
                 {{ cart_product_form }}
                 {% csrf_token %}
-                <input type="submit" value="Добавити в кошик">
+                <input type="submit" class="btn btn-success" value="Добавити в кошик">
             </form>
-            <span>{{ product.desc | linebreaks }}</span>
         </div>
     </div>
 {% endblock %}

@@ -1,7 +1,6 @@
 body {
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
-
 }
 
 .top {
@@ -20,6 +19,10 @@ body {
     float: right;
 }
 
+.wrapper {
+    min-height: calc(100vh - 251px);
+    /*Привязує футер до низу*/
+}
 
 
 #sidebar ul {
@@ -30,6 +33,7 @@ body {
     border: 1px solid #ff5f5f;
     border-radius: 5px;
 }
+
 
 #sidebar ul li {
     padding: 5px 10px;
@@ -43,6 +47,31 @@ body {
 
 #sidebar ul li.selected a {
     color: white;
+}
+
+.detail-left {
+    text-align: center;
+}
+
+.detail-right {
+    padding: 20px;
+    font-size: large;
+    /*background-image: url("../../../media/general/back10.jpg");*/
+    /*background-repeat: repeat;*/
+
+}
+
+hr.modern {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #ff5f5f
+}
+
+.detail-img {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ff5f5f;
+    border-radius: 4px;
 }
 
 .items {
@@ -99,6 +128,7 @@ thead {
 .btn {
     background: #2a6496;
     color: white;
+    margin-left: 15px;
 }
 
 .btn-light {
@@ -269,21 +299,21 @@ thead {
     color: #2b55ff;
 }
 
-#myFooter .fa-google-plus:hover {
-    color: red;
-}
-
-#myFooter .fa-google-plus:focus {
-    color: red;
-}
-
 #myFooter .fa-twitter:hover {
-    color: #00aced;
-
+    color: #1ea1f3;
 }
 
 #myFooter .fa-twitter:focus {
-    color: #00aced;
+    color: #1ea1f3;
+}
+
+#myFooter .fa-instagram:hover {
+    color: #ef514e;
+
+}
+
+#myFooter .fa-instagram:focus {
+    color: #ef514e;
 }
 
 /*---END_FOOTER---*/
@@ -301,6 +331,8 @@ thead {
 	position: relative;
 }
 .prod-img {
+    width: 140px;
+    height: 200px;
     border-radius: 30px;
     border: 1px solid #ff5f5f;
 }
@@ -346,4 +378,15 @@ thead {
 .price {
     font-weight: 600;
     font-size: 20px;
+    color: #ff5f5f;
+}
+
+.buy-form {
+    text-align: center;
+    font-size: large;
+}
+
+.product_list {
+    background-image: url("../../../media/general/back10.jpg");
+    background-repeat: repeat;
 }
