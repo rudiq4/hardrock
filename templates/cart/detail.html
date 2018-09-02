@@ -3,16 +3,16 @@
     Ваш кошик
 {% endblock %}
 {% block content %}
-    <h1>Ваш кошик</h1>
+    <h1>Таблиця замолвень</h1>
     <table class="cart">
         <thead>
         <tr>
             <th>Зображення</th>
             <th>Товар</th>
             <th>Кількість</th>
-            <th>Видалити</th>
-            <th>Повна ціна</th>
             <th>Ціна</th>
+            <th>Повна ціна</th>
+            <th>Видалити</th>
         </tr>
         </thead>
         <tbody>
@@ -30,24 +30,28 @@
                             {{ item.update_quantity_form.quantity }}
                             {{ item.update_quantity_form.update }}
                             {% csrf_token %}
-                            <input type="submit" value="Обновити">
+                            <input type="submit" value="Оновити">
                         </form>
                     </td>
-                    <td><a href="{% url "cart:CartRemove" product.id %}">Видалити</a></td>
                     <td class="num">{{ item.price }} грн.</td>
                     <td class="num">{{ item.total_price }} грн.</td>
+                    <td>
+                        <a href="{% url "cart:CartRemove" product.id %}">
+                            <img src="../../media/general/Delete.png" alt="Видалити" class="delete-img"/>
+                        </a>
+                    </td>
                 </tr>
             {% endwith %}
         {% endfor %}
         <tr class="total">
             <td>Загальна</td>
             <td colspan="4"></td>
-            <td class="num">{{ cart.get_total_price }} грн.</td>
+            <td>{{ cart.get_total_price }} грн.</td>
         </tr>
         </tbody>
     </table>
     <p class="text-right">
-        <a href="{% url "shop:ProductList" %}" class="btn">Продовжити покупки</a>
-        <a href="{% url "orders:OrderCreate" %}" class="btn">Оформити замовлення</a>
+        <a href="{% url "shop:ProductList" %}" class="btn cart-btn">Продовжити покупки</a>
+        <a href="{% url "orders:OrderCreate" %}" class="btn cart-btn">Оформити замовлення</a>
     </p>
 {% endblock %}

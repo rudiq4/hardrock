@@ -86,12 +86,14 @@ hr.modern {
     font-size: 18px;
 }
 
-form.add {
-    margin-bottom: 10px;
-}
+/*----------CART----------*/
 
-form.add label {
-    margin-right: 10px;
+.cart {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: separate;
+    background-color: whitesmoke;
 }
 
 #id_quantity {
@@ -100,33 +102,43 @@ form.add label {
 }
 
 form.add input[type="submit"] {
-    background: #2a6496;
+    background: #ff5f5f;
     border-radius: 3px;
     border: 0;
     padding: 5px 10px;
     color: white;
 }
 
-.table-cart {
-    width: 100%;
-    margin: 10px 0;
-}
 
 .cart-img {
     width: 10%;
 }
 
-th, td {
-    padding: 5px;
+.cart th {
+    padding: 10px;
+    border: 1px solid black;
 }
 
-thead {
-    background: #2a6496;
+.cart td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+thead  {
+    background: #ff5f5f;
+    color: white;
+
+}
+
+.total  {
+    font-size: large;
+    background: #ff5f5f;
     color: white;
 }
 
-.btn {
-    background: #2a6496;
+.cart-btn {
+    background: #ff5f5f;
     color: white;
     margin-left: 15px;
 }
@@ -134,6 +146,14 @@ thead {
 .btn-light {
     background: #808080;
 }
+
+.num {
+    font-size: large;
+    color: #ff5f5f;
+    font-weight: bold;
+}
+
+/*------------- ORDER PAGE ----------------*/
 
 .order-info h2 {
     margin-bottom: 20px;
@@ -238,7 +258,7 @@ thead {
 /*---FOOTER---*/
 
 #myFooter {
-    padding-top: 32px;
+    padding-top: 90px;
 }
 
 #myFooter .container {
@@ -272,7 +292,7 @@ thead {
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: #eee;
+    background-color: lavenderblush;
 }
 
 #myFooter .fa {
