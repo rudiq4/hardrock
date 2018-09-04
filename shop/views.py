@@ -20,6 +20,14 @@ def productlist(request, category_slug=None):
             products = paginator.page(1)
         except EmptyPage:
             products = paginator.page(paginator.num_pages)
+    else:
+        paginator = Paginator(products, 3)
+        try:
+            products = paginator.page(page)
+        except PageNotAnInteger:
+            products = paginator.page(1)
+        except EmptyPage:
+            products = paginator.page(paginator.num_pages)
     context = {
         'category': category,
         'categories': categories,
