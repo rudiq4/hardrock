@@ -6,9 +6,9 @@ from django.conf.urls.static import static
 app_name = 'shop'
 
 urlpatterns = [
-    url(r'^(?P<category_slug>[-\w]+)/$', views.ProductList, name='ProductListByCategory'),
-    url(r'^(?P<id>\d+)/(?P<slug>[-\w]+)/$', views.ProductDetail, name='ProductDetail'),
-    url(r'^$', views.ProductList, name='ProductList'),
+    url(r'^(?P<category_slug>[-\w]+)/$', views.productlist, name='ProductListByCategory'),
+    url(r'^(?P<id>\d+)/(?P<slug>[-\w]+)/$', views.productdetail, name='ProductDetail'),
+    url(r'^$', views.productlist, name='ProductList'),
 ]
 
 if settings.DEBUG:

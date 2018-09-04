@@ -24,9 +24,6 @@ class Category(models.Model):
         return reverse('shop:ProductListByCategory', args=[self.slug])
 
 
-
-
-
 class Product(models.Model):
     category = models.ForeignKey(
         Category,
@@ -83,5 +80,3 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('shop:ProductDetail', args=[self.id, self.slug])
-
-
