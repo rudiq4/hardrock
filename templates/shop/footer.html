@@ -3,12 +3,12 @@
 <footer id="myFooter">
     <div class="container">
         <ul>
-            <li><a href="#">Головна</a></li>
-            <li><a href="#">Доставка</a></li>
+            <li><a href="{% url 'shop:ProductList' %}">Головна</a></li>
+            <li><a href="{% url 'shop:deliver' %}">Доставка</a></li>
             <li><a href="#">Контакти</a></li>
             <li><a href="#">Зворотній звязок</a></li>
         </ul>
-        <p class="footer-copyright">© {% now "Y" %} Copyright Text</p>
+        <p class="footer-copyright">© {% now "Y" %}Вишиванки</p>
     </div>
     <div class="footer-social">
         <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>

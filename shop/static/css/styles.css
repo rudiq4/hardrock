@@ -410,3 +410,42 @@ thead  {
     background-image: url("../../../media/general/back10.jpg");
     background-repeat: repeat;
 }
+
+.paginators {
+    text-align: center;
+}
+
+/*DELIVERY*/
+
+.delivery-picture {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: auto;
+    box-shadow: 0 0 5px #ff5f5f;
+}
+
+.delivery {
+    text-align: center;
+    font-size: larger;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.paragraph {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.delivery2 {
+    margin-top: 40px;
+    text-align: justify;
+}
+
+.novaposhta {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}

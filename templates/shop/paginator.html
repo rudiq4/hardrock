@@ -1,8 +1,9 @@
 {% load static %}
 
+
 <nav aria-label="Page navigation">
     {% if page.has_other_pages %}
-        <ul class="paginaton">
+        <ul class="pagination">
             {% if page.has.previous %}
                 <li><a aria-label="Previous" href="
                 ?page={{ page.previous_page_number }}">&laquo;</a>
@@ -25,3 +26,4 @@
         </ul>
     {% endif %}
 </nav>
+

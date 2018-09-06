@@ -2,12 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from .models import OrderItem, Order
 from .forms import OrderCreateForm
 from cart.cart import Cart
-from django.shortcuts import render, redirect
-from django.core.urlresolvers import reverse
+from django.shortcuts import render, render_to_response
 from django.contrib.admin.views.decorators import staff_member_required
-from django.conf import settings
-from django.http import HttpResponse
-from django.template.loader import render_to_string
 
 
 def OrderCreate(request):

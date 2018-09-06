@@ -39,7 +39,9 @@
                 </div>
                 <!-- ./Product -->
             {% endfor %}
-        {% include 'shop/paginator.html' with page=products %}
+            <div class="col-xs-12 col-lg-12 paginators">
+                {% include 'shop/paginator.html' with page=products %}
+            </div>
         </div>
     </div>
 {% endblock %}
