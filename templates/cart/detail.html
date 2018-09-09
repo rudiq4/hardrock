@@ -1,4 +1,5 @@
 {% extends "shop/base.html" %}
+{% load static %}
 {% block title %}
     Ваш кошик
 {% endblock %}
@@ -37,7 +38,7 @@
                     <td class="num">{{ item.total_price }} грн.</td>
                     <td>
                         <a href="{% url "cart:CartRemove" product.id %}">
-                            <img src="../../media/general/Delete.png" alt="Видалити" class="delete-img"/>
+                            <img src="{% static 'img/general/Delete.png' %}" alt="Видалити" class="delete-img"/>
                         </a>
                     </td>
                 </tr>

@@ -54,9 +54,6 @@ body {
 .detail-right {
     padding: 20px;
     font-size: large;
-    /*background-image: url("../../../media/general/back10.jpg");*/
-    /*background-repeat: repeat;*/
-
 }
 
 hr.modern {
@@ -411,7 +408,7 @@ thead {
 }
 
 .product_list {
-    background-image: url("../../../media/general/back10.jpg");
+    background-image: url("../img/general/back10.jpg");
     background-repeat: repeat;
 }
 
