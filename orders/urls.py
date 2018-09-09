@@ -5,6 +5,6 @@ from . import views
 app_name = 'orders'
 
 urlpatterns = [
-    url(r'^create/$', views.OrderCreate, name='OrderCreate'),
-    url(r'^admin/order/(?P<order_id>\d+)/$', views.AdminOrderDetail, name='AdminOrderDetail')
+    url(r'^create/$', views.order_create, name='OrderCreate'),
+    url(r'^admin/order/(?P<order_id>\d+)/$', views.admin_order_detail, name='AdminOrderDetail')
 ]

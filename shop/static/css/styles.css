@@ -289,7 +289,7 @@ thead {
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: lavenderblush;
+    background-color: #f8f8f8
 }
 
 #myFooter .fa {
@@ -445,7 +445,7 @@ thead {
 
 .delivery2 {
     margin-top: 40px;
-    text-align: justify;
+    text-align: center;
 }
 
 .novaposhta {
@@ -478,7 +478,7 @@ thead {
 }
 
 .map {
-    width: 75%;
+    width: 100%;
 }
 
 [class*=mobo-] {

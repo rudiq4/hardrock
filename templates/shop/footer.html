@@ -5,8 +5,7 @@
         <ul>
             <li><a href="{% url 'shop:ProductList' %}">Головна</a></li>
             <li><a href="{% url 'shop:deliver' %}">Доставка</a></li>
-            <li><a href="#">Контакти</a></li>
-{#            <li><a href="#">Зворотній звязок</a></li>#}
+            <li><a href="{% url 'shop:contacts' %}">Контакти</a></li>
         </ul>
         <p class="footer-copyright">© {% now "Y" %} Вишиванки</p>
     </div>

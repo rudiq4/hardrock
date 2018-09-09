@@ -8,12 +8,12 @@ import datetime
 
 
 def OrderDetail(obj):
-    return format_html('<a href="{}">Посмотреть</a>'.format(
+    return format_html('<a href="{}">Переглянути</a>'.format(
         reverse('orders:AdminOrderDetail', args=[obj.id])
     ))
 
 
-def ExportToCSV(modeladmin, request, queryset):
+def ExportToCSV(modeladmin, queryset):
     opts = modeladmin.model._meta
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; \
@@ -40,8 +40,8 @@ class OrderItemInline(admin.TabularInline):
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ['id', 'size', 'first_name', 'last_name', 'email', 'address',
-                    'postal_code', 'city', 'paid', 'created', 'updated', OrderDetail]
+    list_display = ['id', OrderDetail, 'size', 'first_name', 'last_name', 'email', 'address',
+                    'postal_code', 'city', 'paid', 'created', 'updated', ]
     list_filter = ['paid', 'created', 'updated']
     inLines = [OrderItemInline]
     actions = [ExportToCSV]

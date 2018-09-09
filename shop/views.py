@@ -51,5 +51,3 @@ def productdetail(request, id, slug):
     return render_to_response('shop/product/detail.html',
                               {'product': product,
                                'cart_product_form': cart_product_form})
-
-
