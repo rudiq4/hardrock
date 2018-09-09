@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,7 +16,7 @@
     <section id="header">
         {% include 'shop/header.html' %}
     </section>
-    <section id="content row" class="container-fluid">
+    <section id="content row" class="container">
         {% block content %}{% endblock %}
     </section>
 </div>
