@@ -16,7 +16,7 @@
 
             <div class="col-md-6">
                 <ul class="rightc">
-                    <li><i class="fa fa-phone"></i> +38(066)673-22-65</li>
+                    <li><i class="fa fa-phone"></i> +38-066-888-88-88</li>
                     <li><i class="fa fa-cart-plus"></i>
                         {% with total_items=cart|length %}
                             {% if cart|length > 0 %}
@@ -67,10 +67,9 @@
 {#                        </ul>#}
 {#                    </li>#}
                     <li><a href="{% url 'shop:deliver' %}">Доставка</a></li>
-                    <li><a href="#">Контакти</a></li>
-                    <li><a href="http://127.0.0.1:8000/admin">Зворотній звязок</a></li>
+                    <li><a href="{% url 'shop:contacts' %}">Контакти</a></li>
+{#                    <li><a href="http://127.0.0.1:8000/admin">Зворотній звязок</a></li>#}
                 </ul>
-
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>

@@ -8,6 +8,10 @@ def deliver(request):
     return render(request, 'other/delivery.html')
 
 
+def contacts(request):
+    return render(request, 'other/contacts.html')
+
+
 def productlist(request, category_slug=None):
     template = 'shop/product/list.html'
     category = None

@@ -24,7 +24,6 @@ body {
     /*Привязує футер до низу*/
 }
 
-
 #sidebar ul {
     list-style: none;
     margin: 0;
@@ -33,7 +32,6 @@ body {
     border: 1px solid #ff5f5f;
     border-radius: 5px;
 }
-
 
 #sidebar ul li {
     padding: 5px 10px;
@@ -109,7 +107,6 @@ form.add input[type="submit"] {
     color: white;
 }
 
-
 .cart-img {
     width: 10%;
 }
@@ -125,13 +122,13 @@ form.add input[type="submit"] {
     border: 1px solid black;
 }
 
-thead  {
+thead {
     background: #ff5f5f;
     color: white;
 
 }
 
-.total  {
+.total {
     font-size: large;
     background: #ff5f5f;
     color: white;
@@ -339,60 +336,67 @@ thead  {
 /*---END_FOOTER---*/
 
 /* Product Grid */
-.product-grid{
-	padding-bottom: 20px;
-	padding-top: 20px;
+.product-grid {
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
-.product-grid:hover{
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+.product-grid:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.prod-image{
+
+.prod-image {
     text-align: center;
-	position: relative;
+    position: relative;
 }
+
 .prod-img {
     width: 140px;
     height: 200px;
     border-radius: 30px;
     border: 1px solid #ff5f5f;
 }
-.overlay{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	transition: .5s ease;
-	background-color: rgba(67, 68, 68, 0.7);
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(67, 68, 68, 0.7);
     border-radius: 30px;
 }
-.prod-image:hover .overlay{
-	opacity: 1;
-}
-.detail{
-	color: #fff;
-	font-size: 20px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
+
+.prod-image:hover .overlay {
+    opacity: 1;
 }
 
-.buy{
-	background-color: transparent;
-	color: #434444;
-	border-radius: 0;
-	border: 1px solid #434444;
-	width: 100%;
-	margin-top: 20px;
+.detail {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
-.buy:hover{
-	background-color: #434444;
-	color: #fff;
+
+.buy {
+    background-color: transparent;
+    color: #434444;
+    border-radius: 0;
+    border: 1px solid #434444;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.buy:hover {
+    background-color: #434444;
+    color: #fff;
 }
 
 .price {
@@ -448,4 +452,63 @@ thead  {
     margin-top: 30px;
     margin-bottom: 30px;
     width: 100%;
+}
+
+/* CONTACTS */
+
+.numbers {
+    font-size: large;
+}
+
+.numbers-list {
+    display: inline-block;
+}
+
+.contacts-left {
+    text-align: center;
+}
+
+.contacts-right {
+    font-size: large;
+    text-align: center;
+}
+
+.contacts-map {
+    text-align: center;
+}
+
+.map {
+    width: 75%;
+}
+
+[class*=mobo-] {
+    text-indent: 5px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+/ / display: inline;
+/ / zoom: 1;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+/*Vodafone*/
+.mobo-vodafone-16 {
+    line-height: 16px;
+    padding-left: 16px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADFUlEQVQ4T1VTS0wTURQ9b6SEdgoNEZUqRT4GiG6bGDdGXdCNG4OJRg3sZEEwbhQ3BhWj0ehWJd3pzggrIHxEXGjiotGFIfVTElroJ7RQSzudTqfteF5Vgjd5mTfv3XvuufeeJ7DLAoGAzel0djQ0NJyz2Wy95XK5zSqXkdO0yFY6vVDes2eiFljxer3mvzAhN5ZlidXV1QMOh+Oy3W4fghBt+c1NkU8moU1MwFpfh3bhguVsb49sZzLPstnsK5/PlxBCWFWA5eXl5paWlhs8GCxblqpHo8gFAmhcXITj61csj4yg7uhR6JqGomnmdV33E+RRX19fXEjaHo/nmqqqd0ulkqoxuPjpEw4Eg6ibm0PcNBGZnoaSTsMggF4owDCMPG0sk8k8FcFgsIsA8ww+bOg69PfvsffDB6gzM2Bd+LV/P2KXLmHL60Xe7YaRzVZBCoXCOpn4RDQaHXG5XA8LhiG0UAh1s7NoYt3Kt29AsQiLJRbsdmweO4bQ+fPY6OqCvr3NqyIqlcqoSCaTi/Q5U5KOzOx68QKNnz8DqZTs7s6MTEXB6qlT+EKQXzU1sCoVefdRpFKpENE6pUOFNTfduwdnJAKw9t0mE8Q9HgT6+7HR2VllR1sTiURihQAdphCwFhbQdPs2XLHYf9mlp3SPNTfjy8AANrq7IZiA418T4XD4HQVzukRK+vfvaBobg5tTqM73r8lCskyw0tODHxcvIn3wIBT6E+CjoAZuUTwP8pomNNKqff0a7X4/Gra2qg0scxkMTtTXI3T2LOInT1bZUDOyiXfE0tJSj9vtntM0rdUggMZ5O6emcGh+HvVSE3ROcpTrx48jeeIEcqoK5U9zo6Zp+qpCIpXrXKMEUTlOaLkcFJZTGw6jwreg79uHHBtYtNkgSJ3Z8/S/z++Taqlk0cyfm1TYVSpMpUCQJ5tiqSTrhEK6gntJmyaD/cz+eHh4OLbzmCYnJyXIFSpsiKuVDhzLXx38CZQ/a1zPObWXDI7Ls93Nxvj4uE1RlCOcSh8ve7lvlS+VFmbD3vLsDfc/BwcHd0TyG2s2xI86Q15MAAAAAElFTkSuQmCC);
+}
+
+/*Київстар*/
+.mobo-kyivstar-16{
+line-height:16px;
+padding-left:16px;
+background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACHUlEQVQ4T6WSTUhUURiGn++eex3FcEahINAWE/SDhFHRMhfRQiqipKB2WbpKnVxUtBKCiP4oR00X0SZoIbSpRVIiRFQ7S9DcCRIYRWYZOjP35/RpTlMqgnQuFy73fOf53vc9n7Da6sztIqSab94j2iVYqVRWBaSjYSxJSuUwZ2Rw7YCe6ANIFTGOclqerx3Qa0dVwab/AYwpoJIi6mmQ/pUVdGar8d0GPPsO67/iZfEEfRIuFHeED9XCXkrkCI2idnTdthUUZXcTePuwdlzo9tvAvYLHDKH9QmCHcKL7GPc106zHZZ0+42TYiIkaEbsf16nEkQRZOyFcm4pTFm/FaheXHYgImXCAOXOWi/JxsWsJXtSEkev6utroEzZ6BlFP4RqbrEeN3rmN6rTDe3IM0CLZP75v2S3EonpcDTZnBnXvx/zeynNw3BpFSWF4rH6ryXbJLQ1yOeCBLeZ7UIvrlrOBx4wSUOHvIXS2gnnBeZn8G7IEoJ26ggMYc1PDTDDj1FDKLE54A8c5qanfUVA6L3+5hXR2G553VROu0yzuMelcZqTPp/bYIYzThcNPQrnEZ57m7RUUdNtyTTWlh1NKfovvt9IcG/s9D1/LcBMpXLmgg/VG91Kci438q6DLbtcfd1VmUrNtUf/9nFgcqAVIZjNG1Vk5qOpO0WyeaJ16zq9evcY5fycEDtMlQ8sT19qObJLQVGFnh2mLT80f/QXGXMYoeIJ9OQAAAABJRU5ErkJggg==);
+}
+
+/*Lifecell*/
+.mobo-lifecell-16{
+line-height:16px;
+padding-left:16px;
+background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACzklEQVQ4T21TT0gUcRT+fjPj/jFHE1w6qKGnyIjIJA916Q9WitBF8BRIh06SFCVhncoOBsImSHaIpPIQllAGRUVSoolWEhIUSSItbm2paLszu7Mzv77f5IZEs8zMb9/73nvfe98bgXWXlNAxgxIriwMiiyNColwCGgRinoHnIo3HYQtxsQ/ZXJjIHRanULQBaCC4jbatUiBJZ4Bn3cdIGHx+9iR6HBdDhbX4qcx+AjkKMx3CCR5PCgGTVaeFi5fCwGYG1NMW9FNICLK06O8LhREV27Ao5F3omUocZcVuAosJjBHQ9mAWz5p2wkivYID2Otq9HFvpMYlER+gX+oV8j+J0Bg81DVWehw+ui9uujsHCGvxQAfYb9DBBC4+umgfnolh7ZDOXtXFYJN+hXnfRT8OgZuCG6yAsNOwgeIbQCqLPM0EJ/1sMG/cEvmoSdbSV8dwqUuPo1nRojo3OYAilUscFtlMrPKT4DjLBRtU/y48wQWtWIhXQ0URbB5OMCnsa0YUltEfCKDLyWA04xsosyKf6edA5yGH2Hc3fjTHVVnICNbqOW0RZYqoPecMLcM81oFFquL42cX/mDBqjZGcKTMwnLVQaWdiWhUTIxFm22UKl4r6Mq28RMTxc5iCbGeiyYoKOq9Tumu2ijHK2095M6DJvi8Gb1F5IF0/9BPYktpDsEB2llOcL1bgYS2C4PIJS2qOE7KfPye3N2k4EyPY0VYGwJ7CXCjwiOM7griVgILyKAKn2klWjknBdsGpP3fGUg0Nqs1SCPaR5R7FwBDrNaiSsSRynOl2EqlX+u/L+5kpkmOASW+z1HSsvUJJnooGyfczfhdfLr1DMVb1H2tX/BpOhQ4lvBsO4Irbj259vgSzmRhCsMOGKGjiUto6ke9ljJLe+/tAkvqvvgDvdz0Jx+lnzP5c9joNs6ZSno4pD0hg8T+CTjIf7BRo+qSK5sN95ER6zmx4sDQAAAABJRU5ErkJggg==);
 }
