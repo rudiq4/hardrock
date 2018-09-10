@@ -4,10 +4,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'b5nk6@j0hx=s&207*uv10g6-z$yhaemnq--0h3+nqfkzwhlzsp'
 
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = []
-#ALLOWED_HOSTS = ['rudik4.pythonanywhere.com']
+ALLOWED_HOSTS = ['rudik4.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
