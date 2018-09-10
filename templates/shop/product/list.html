@@ -4,7 +4,7 @@
     {% if category %} {{ category.name }} {% else %} Головна {% endif %}
 {% endblock %}
 {% block content %}
-    <div id="sidebar" class="col-sm-3 sid">
+    <div id="sidebar" class="col-sm-3">
         <h3>Категорії</h3>
         <ul>
             <li {% if not category %} class="selected" {% endif %}>
@@ -23,7 +23,7 @@
         <div class="items row">
             {% for product in products %}
                 <!-- Product  -->
-                <div class="col-sm-12 col-xs-4 col-lg-3 product-grid">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 product-grid">
                     <div class="prod-image">
                         <a href="{{ product.get_absolute_url }}">
                             <img src="
