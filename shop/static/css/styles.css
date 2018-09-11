@@ -72,10 +72,21 @@ hr.modern {
     font-size: 18px;
 }
 
-/*----------CART----------*/
+@media (max-width: 576px) {
+    .add-button {
+        margin-top: 15px;
+    }
+}
 
+/*----------CART----------*/
 .cart {
     font-size: large;
+}
+
+@media (max-width: 576px) {
+    .cart {
+        font-size: small;
+    }
 }
 
 #id_quantity {
@@ -94,7 +105,6 @@ form.add input[type="submit"] {
 thead {
     background: #ff5f5f;
     color: white;
-
 }
 
 .total {
@@ -104,9 +114,9 @@ thead {
 }
 
 .cart-btn {
+    margin: 10px;
     background: #ff5f5f;
     color: white;
-    margin-left: 15px;
 }
 
 .btn-light {
@@ -488,9 +498,4 @@ thead {
     }
 }
 
-@media screen and (max-width: 640px) {
-	table {
-		overflow-x: auto;
-		display: block;
-	}
-}
+

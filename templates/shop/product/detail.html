@@ -20,7 +20,7 @@
             <form action="{% url "cart:CartAdd" product.id %}" method="post" class="buy-form">
                 {{ cart_product_form }}
                 {% csrf_token %}
-                <input type="submit" class="btn btn-success" value="Добавити в кошик">
+                <input type="submit" class="btn btn-success add-button" value="Добавити в кошик">
             </form>
         </div>
     </div>
