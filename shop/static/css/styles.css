@@ -10,15 +10,6 @@ body {
     text-transform: uppercase;
 }
 
-.top-bl {
-    background: #bebebe;
-    padding: 15px;
-}
-
-.top-bl .cart {
-    float: right;
-}
-
 .wrapper {
     min-height: calc(100vh - 251px);
     /*Привязує футер до низу*/
@@ -84,11 +75,7 @@ hr.modern {
 /*----------CART----------*/
 
 .cart {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    border-collapse: separate;
-    background-color: whitesmoke;
+    font-size: large;
 }
 
 #id_quantity {
@@ -102,21 +89,6 @@ form.add input[type="submit"] {
     border: 0;
     padding: 5px 10px;
     color: white;
-}
-
-.cart-img {
-    width: 10%;
-}
-
-.cart th {
-    padding: 10px;
-    border: 1px solid black;
-}
-
-.cart td {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid black;
 }
 
 thead {
@@ -397,6 +369,7 @@ thead {
 }
 
 .price {
+    text-align: center;
     font-weight: 600;
     font-size: 20px;
     color: #ff5f5f;
@@ -430,7 +403,6 @@ thead {
 .delivery {
     text-align: center;
     font-size: larger;
-    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .paragraph {
@@ -514,4 +486,11 @@ thead {
     .social {
         display: none;
     }
+}
+
+@media screen and (max-width: 640px) {
+	table {
+		overflow-x: auto;
+		display: block;
+	}
 }
