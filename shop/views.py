@@ -21,7 +21,7 @@ def productlist(request, category_slug=None):
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         sort_products = products.filter(category=category)
-        paginator = Paginator(sort_products, 9)
+        paginator = Paginator(sort_products, 8)
         try:
             products = paginator.page(page)
         except PageNotAnInteger:
@@ -29,7 +29,7 @@ def productlist(request, category_slug=None):
         except EmptyPage:
             products = paginator.page(paginator.num_pages)
     else:
-        paginator = Paginator(products, 9)
+        paginator = Paginator(products, 8)
         try:
             products = paginator.page(page)
         except PageNotAnInteger:
